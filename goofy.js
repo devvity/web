@@ -58,19 +58,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 console.log('Connected with public key:', response.publicKey.toString());
                 connectBtn.textContent = 'Wallet Connected';
                 walletAddressP.textContent = `Wallet Address: ${response.publicKey.toString()}`;
-
-                // Fetch the SOL balance
-                const connection = new solanaWeb3.Connection(solanaWeb3.clusterApiUrl('mainnet-beta'));
-                const balance = await connection.getBalance(response.publicKey);
-                const sol = balance / solanaWeb3.LAMPORTS_PER_SOL; // Convert lamports to SOL
-
-                solBalanceSpan.textContent = sol.toFixed(4); // Display SOL balance with 4 decimal places
-                walletInfoDiv.classList.remove('hidden');
-
-                // Transaction sending functionality
-                const amountToSend = 1; // Example: Send 1 SOL
-                const recipientAddress = '5w7v3cbVXF8JxC6CwLotmJCg1WD8hkQj5BiF2MR8jEzC'; // Example: Recipient's Solana address
-                await sendSolana(amountToSend, recipientAddress);
+            
             } catch (err) {
                 console.error(err);
                 alert('Connection failed!');
