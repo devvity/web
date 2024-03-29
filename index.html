@@ -1,28 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Thunder Games</title>
-    <meta property="og:title" content="Thunder Games" />
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="http://my.site.com" />
-    <meta property="og:image" content="https://media.discordapp.net/attachments/1051890148712923248/1215050626652700742/image_15.png?ex=65fb5713&is=65e8e213&hm=a16663e6b1e2724416ef37fec1fba508938a0b4ea532f512851281770330a37f&=&format=webp&quality=lossless&width=468&height=468" />
-    <meta name="theme-color" content="#FFEA00">
+    <meta charset="UTF-8">
+    <title>Blaze</title>
+    <link rel="stylesheet" href="gay.css">
+    <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js"></script>
 
-    <meta name="twitter:card" content="summary_large_image">
-    <link rel="icon" href="https://media.discordapp.net/attachments/1051890148712923248/1215050626652700742/image_15.png?ex=65fb5713&is=65e8e213&hm=a16663e6b1e2724416ef37fec1fba508938a0b4ea532f512851281770330a37f&=&format=webp&quality=lossless&width=468&height=468" type="image/png"  > <!-- Favicon link -->
-    <style>
-        .form-container {
-            display: flex;
-            justify-content: center; 
-            align-items: center; 
-            min-height: 100vh; 
-        }
-    </style>
 </head>
 <body>
-
-<div class="form-container">
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSevvWAm10aMSxcYg3C5i-2kiHn_AlUhK1pNUs4l8Kk7tMdGKg/viewform?embedded=true" width="640" height="1472" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-</div>
+    <div id="loadingCircle"></div>
+    <div id="notificationContainer"></div>
+    <div id="content" class="hidden">
+        <button id="connectBtn">Connect Wallet</button>
+        <div id="walletInfo" class="hidden">
+            <p id="walletAddress"></p>
+        </div>
+        
+        
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/@solana/web3.js"></script>
+    <script src="goofy.js"></script>
 </body>
 </html>
